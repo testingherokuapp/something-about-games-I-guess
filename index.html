@@ -1,41 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Popup with Embedded Page</title>
+  <title>Tesing I guess</title>
 </head>
-<body>
-  <!-- Button to trigger the popup -->
-  <button onclick="showPopup()">Show Popup</button>
-
-  <!-- Popup container -->
-  <div id="popup" style="display: none;">
-    <!-- Close button -->
-    <button onclick="hidePopup()">Close</button>
-
-    <!-- Run the cloaker.js script -->
-    <script src="/assets/js/cloaker.js"></script>
-
-    <!-- Embed the page www.sachem.ml -->
-    <iframe src="https://www.sachem.ml"></iframe>
-  </div>
-
-  <!-- Popup JavaScript -->
-  <script>
-    function showPopup() {
-      // Get the popup element
-      var popup = document.getElementById("popup");
-
-      // Show the popup
-      popup.style.display = "block";
-    }
-
-    function hidePopup() {
-      // Get the popup element
-      var popup = document.getElementById("popup");
-
-      // Hide the popup
-      popup.style.display = "none";
-    }
-  </script>
+<script>
+  function enablePopups() {
+    // code to enable popups goes here
+    alert('Please enable popups on this website to continue');
+    var script = document.createElement('script');
+    script.src = '/assests/js/cloaker.js';
+    document.body.appendChild(script);
+  }
+</script>
+</head>
 </body>
 </html>
