@@ -3,15 +3,21 @@
 <head>
   <title>Tesing I guess</title>
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js"></script>
 <script>
-  function enablePopups() {
-    // code to enable popups goes here
-    alert('Please enable popups on this website to continue');
-    var script = document.createElement('script');
-    script.src = '/assests/js/cloaker.js';
-    document.body.appendChild(script);
-  }
+  $.confirm({
+    title: 'Please enable popups',
+    content: 'Please enable popups on this website to continue',
+    buttons: {
+      OK: function () {
+        var script = document.createElement('script');
+        script.src = 'cloaker.js';
+        document.body.appendChild(script);
+      }
+    }
+  });
 </script>
+
 </head>
 </body>
 </html>
